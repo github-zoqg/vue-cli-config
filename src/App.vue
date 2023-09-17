@@ -1,19 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/demo.gif">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/demo.gif" />
+    <HelloWorld
+      msg="Welcome to Your Vue.js App"
+      :asd="'123'"
+      className="asd"
+      id="123"
+      style="background-color: aliceblue"
+    />
+    <SvgBaseDOM />
+    <CanvasDom />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import SvgBaseDOM from "./components/BaseSvg.vue";
+import CanvasDom from "./components/CanvasBase.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    SvgBaseDOM,
+    CanvasDom,
+  },
+};
 </script>
 
 <style>

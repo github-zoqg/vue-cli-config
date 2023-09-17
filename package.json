@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "d3": "^7.8.5",
+    "three": "0.148.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -34,7 +36,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",
