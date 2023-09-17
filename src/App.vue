@@ -16,7 +16,7 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import SvgBaseDOM from "./components/BaseSvg.vue";
-import CanvasDom from "./components/CanvasBase.vue";
+import CanvasDom from "./components/BaseCanvas.vue";
 
 export default {
   name: "App",
