@@ -1,5 +1,6 @@
 <template>
   <div class="animation">
+    <img src="../assets/demo.gif" alt="" />
     <canvas id="canvas" width="300" height="300"></canvas>
   </div>
 </template>
@@ -23,7 +24,9 @@ export default {
         "https://5773cba1-42a7-443a-b6df-98e504bb71e3.mdnplay.dev/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations/canvas_earth.png";
     },
     draw() {
-      var ctx = document.getElementById("canvas").getContext("2d");
+      let dom = document.getElementById("canvas");
+      if (!dom) return;
+      var ctx = dom.getContext("2d");
 
       ctx.globalCompositeOperation = "destination-over";
       ctx.clearRect(0, 0, 300, 300); // clear canvas

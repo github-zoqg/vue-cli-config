@@ -31,8 +31,10 @@ export default {
     initThree() {
       // 定义threejs输出画布的尺寸(单位:像素px)
       // const width = 800; //宽度
-      const width = document.querySelector(".hello").offsetWidth; //宽度
-      const height = 500; //高度
+      const width = document.querySelector(".hello").offsetWidth / 2; //宽度
+      console.log(width, window.innerWidth, "width");
+      // const width = window.innerWidth; //宽度
+      const height = 600; //高度
 
       // 创建一个场景
       const scene = new THREE.Scene();
@@ -105,13 +107,15 @@ export default {
 
       // 挂载dom
       // 渲染器WebGLRenderer通过属性.domElement可以获得渲染方法.render()生成的Canvas画布
+      renderer.domElement.style.display = "inline";
       document.querySelector(".hello").appendChild(renderer.domElement);
     },
     test: () => {
       console.log(this, "Parent");
     },
     createBox() {
-      let width = window.innerWidth;
+      // let width = window.innerWidth;
+      const width = document.querySelector(".hello").offsetWidth / 2; //宽度
       let height = 600;
       // 创建场景
       let scene = new THREE.Scene();
@@ -150,6 +154,7 @@ export default {
       renderer.render(scene, camera);
       this.addOrbitControls(scene, camera, renderer);
       // 挂载dom
+      renderer.domElement.style.display = "inline";
       document.querySelector(".hello").appendChild(renderer.domElement);
     },
     initGUI() {
